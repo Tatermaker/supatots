@@ -1,24 +1,115 @@
-<!doctype html>
-<html>
+<!DOCTYPE html>
+<html lang="en">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Expanded Boilerplate with Preline</title>
+
+  <!-- Tailwind CSS and Plugins -->
   <script src="https://cdn.tailwindcss.com?plugins=forms,typography,aspect-ratio,line-clamp,container-queries"></script>
   <script>
     tailwind.config = {
       theme: {
         extend: {
           colors: {
+            primary: '#3490dc',
+            secondary: '#ffed4a',
             clifford: '#da373d',
+            dark: '#2d3748',
           }
         }
       }
     }
   </script>
+
+  <!-- Preline Plugin -->
+  <script type="module">
+    import preline from 'https://cdn.jsdelivr.net/npm/preline@2.5.1/+esm'
+  </script>
 </head>
-<body>
-  <h1 class="text-3xl font-bold underline text-clifford">
-    Hello world!
-  </h1>
+<body class="bg-gray-100">
+
+  <!-- Navbar -->
+  <nav class="bg-dark text-white p-4">
+    <div class="container mx-auto flex justify-between items-center">
+      <a href="#" class="text-2xl font-bold">BrandName</a>
+      <div>
+        <a href="#about" class="ml-4 text-lg hover:underline">About</a>
+        <a href="#services" class="ml-4 text-lg hover:underline">Services</a>
+        <a href="#contact" class="ml-4 text-lg hover:underline">Contact</a>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Hero Section -->
+  <section class="bg-clifford text-white h-screen flex items-center">
+    <div class="container mx-auto text-center px-6">
+      <h1 class="text-6xl font-bold mb-6">Welcome to Our Website</h1>
+      <p class="text-xl mb-8">We provide top-notch services to help you succeed.</p>
+      <a href="#services" class="bg-white text-clifford py-3 px-6 rounded-full font-semibold text-lg hover:bg-gray-200 transition">Explore Our Services</a>
+    </div>
+  </section>
+
+  <!-- About Section -->
+  <section id="about" class="py-16 bg-gray-50">
+    <div class="container mx-auto text-center">
+      <h2 class="text-4xl font-bold mb-4">About Us</h2>
+      <p class="text-lg text-gray-700 max-w-2xl mx-auto">We are a dedicated team of professionals committed to providing high-quality services to help you reach your goals.</p>
+    </div>
+  </section>
+
+  <!-- Services Section -->
+  <section id="services" class="py-16 bg-white">
+    <div class="container mx-auto">
+      <h2 class="text-4xl font-bold text-center mb-12">Our Services</h2>
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+        <!-- Service 1 -->
+        <div class="bg-gray-100 p-6 rounded-lg text-center">
+          <h3 class="text-2xl font-bold mb-4">Service One</h3>
+          <p class="text-gray-700 mb-6">We offer great solutions tailored to your needs.</p>
+          <a href="#" class="bg-clifford text-white py-2 px-4 rounded-full">Learn More</a>
+        </div>
+        <!-- Service 2 -->
+        <div class="bg-gray-100 p-6 rounded-lg text-center">
+          <h3 class="text-2xl font-bold mb-4">Service Two</h3>
+          <p class="text-gray-700 mb-6">Get professional support and guidance.</p>
+          <a href="#" class="bg-clifford text-white py-2 px-4 rounded-full">Learn More</a>
+        </div>
+        <!-- Service 3 -->
+        <div class="bg-gray-100 p-6 rounded-lg text-center">
+          <h3 class="text-2xl font-bold mb-4">Service Three</h3>
+          <p class="text-gray-700 mb-6">Achieve your goals with our expert services.</p>
+          <a href="#" class="bg-clifford text-white py-2 px-4 rounded-full">Learn More</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact Section -->
+  <section id="contact" class="py-16 bg-gray-50">
+    <div class="container mx-auto text-center">
+      <h2 class="text-4xl font-bold mb-8">Get In Touch</h2>
+      <form class="max-w-lg mx-auto">
+        <div class="mb-4">
+          <input type="text" placeholder="Your Name" class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-clifford">
+        </div>
+        <div class="mb-4">
+          <input type="email" placeholder="Your Email" class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-clifford">
+        </div>
+        <div class="mb-4">
+          <textarea placeholder="Your Message" class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-clifford"></textarea>
+        </div>
+        <button type="submit" class="bg-clifford text-white py-2 px-6 rounded-full hover:bg-red-600 transition">Send Message</button>
+      </form>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="bg-dark text-white py-4">
+    <div class="container mx-auto text-center">
+      <p>&copy; 2024 BrandName. All rights reserved.</p>
+    </div>
+  </footer>
+
 </body>
 </html>
