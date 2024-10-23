@@ -24,8 +24,14 @@
 
   <!-- Preline Plugin -->
   <script type="module">
-    import preline from 'https://cdn.jsdelivr.net/npm/preline@2.5.1/+esm'
+    import preline from 'https://cdn.jsdelivr.net/npm/preline@2.5.1/+esm';
+  
+    // Initialize Preline after the DOM content is fully loaded
+    document.addEventListener('DOMContentLoaded', function() {
+      window.HSStaticMethods.autoInit();
+    });
   </script>
+    
 </head>
 <body class="bg-gray-100">
 
